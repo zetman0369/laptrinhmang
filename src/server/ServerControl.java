@@ -368,27 +368,27 @@ public class ServerControl {
                                 String[] arStr2 = t2.split("\\:");
                                 for (int i=0;i<4;i++) {
                                     if(Integer.parseInt(arStr[i])> Integer.parseInt(arStr2[i])){
-                                        temp_pair.getKey().oos.writeUTF("result");
-                                        temp_pair.getKey().oos.writeObject("YOU LOSE");
-                                        temp_pair.getValue().oos.writeUTF("result");
-                                        temp_pair.getValue().oos.writeObject("YOU WIN");
+//                                        temp_pair.getKey().oos.writeUTF("result");
+//                                        temp_pair.getKey().oos.writeObject("YOU LOSE");
+//                                        temp_pair.getValue().oos.writeUTF("result");
+//                                        temp_pair.getValue().oos.writeObject("YOU WIN");
                                         db.updatePoints(temp_pair.getKey().getUser(), 1);
                                         System.out.println(temp_pair.getKey().getUser().getUsername()+"win");
                                         break;
                                     }else{
                                         if(Integer.parseInt(arStr[i])<Integer.parseInt(arStr2[i])){
-                                            temp_pair.getKey().oos.writeUTF("result");
-                                            temp_pair.getKey().oos.writeObject("YOU WIN");
-                                            temp_pair.getValue().oos.writeUTF("result");
-                                            temp_pair.getValue().oos.writeObject("YOU LOSE");
+//                                            temp_pair.getKey().oos.writeUTF("result");
+//                                            temp_pair.getKey().oos.writeObject("YOU WIN");
+//                                            temp_pair.getValue().oos.writeUTF("result");
+//                                            temp_pair.getValue().oos.writeObject("YOU LOSE");
                                             db.updatePoints(temp_pair.getKey().getUser(), 1);
                                             System.out.println(temp_pair.getKey().getUser().getUsername()+"win");
                                             break;
                                         }else{
-                                            temp_pair.getKey().oos.writeUTF("result");
-                                            temp_pair.getKey().oos.writeObject("TIE");
-                                            temp_pair.getValue().oos.writeUTF("result");
-                                            temp_pair.getValue().oos.writeObject("TIE");
+//                                            temp_pair.getKey().oos.writeUTF("result");
+//                                            temp_pair.getKey().oos.writeObject("TIE");
+//                                            temp_pair.getValue().oos.writeUTF("result");
+//                                            temp_pair.getValue().oos.writeObject("TIE");
                                             db.updatePoints(temp_pair.getKey().getUser(), (float) 0.5);
                                             db.updatePoints(temp_pair.getValue().getUser(), (float) 0.5);
                                         }
